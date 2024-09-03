@@ -1,0 +1,12 @@
+Run the command by explicitly starting the sh interpreter, and giving it the file semester as the first argument, i.e. sh semester. 
+Why does this work, while ./semester didn’t?
+这个命令显式地调用 sh（Bourne shell）解释器来执行文件 semester。
+在这种情况下，sh 解释器会读取并执行 semester 文件中的内容，无论该文件的权限如何。
+sh 不关心文件的可执行权限，因为它直接解释文件中的内容作为 shell 脚本。
+
+
+How does your shell know that the file is supposed to be interpreted using sh? 
+Shebang 是一种特殊的注释行，用于指定一个脚本应该由哪个解释器执行。
+Shebang 指定了一个解释器，操作系统根据这个解释器来执行脚本。
+例如，#!/bin/sh 表示使用 Bourne shell 执行脚本，#!/usr/bin/python3 表示使用 Python 3 执行脚本。
+

@@ -1,0 +1,6 @@
+1.
+ls -alh --color=auto --sort=time
+2.
+source 命令可以执行Shell脚本中的命令，使脚本中定义的环境变量和函数在当前Shell会话中可用。
+3.
+

@@ -1,0 +1,1 @@
+sed 会处理输入文件 input.txt，并将结果输出到标准输出。在你使用 > input.txt 时，输出会被重定向到同一个文件 input.txt。问题是，文件重定向会在命令执行前就清空目标文件，也就是说，当 sed 还没有处理 input.txt 时，shell 已经将 input.txt 清空。结果是，sed 处理的文件是空的，输出也会是空的。最后 input.txt 的内容会丢失。

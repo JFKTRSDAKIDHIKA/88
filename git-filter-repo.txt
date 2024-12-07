@@ -1,0 +1,73 @@
+Git-Filter-Repo 笔记
+1. 工具简介
+git-filter-repo 是一种强大的 Git 仓库重写工具，专门用于高效和灵活地修改 Git 仓库的历史记录。
+它可以代替 git filter-branch，提供更快、更可靠的操作方式。
+
+2. 安装方式
+通过 pip 安装：
+
+bash
+复制代码
+pip install git-filter-repo
+3. 常见功能
+a. 删除文件或路径的历史
+使用 --path 和 --invert-paths 参数，可以从仓库中完全移除特定路径的文件及其历史。
+
+示例：
+移除 secret.txt 文件的历史记录：
+
+bash
+复制代码
+git filter-repo --path secret.txt --invert-paths
+说明：
+
+--path secret.txt：指定需要操作的文件路径。
+--invert-paths：表示保留除了指定路径之外的其他所有内容。
+b. 重写文件路径
+重命名或移动文件路径：
+
+bash
+复制代码
+git filter-repo --path old_folder/ --to-path new_folder/
+将 old_folder 中的所有文件移动到 new_folder。
+
+c. 替换敏感信息
+批量替换提交历史中的敏感信息：
+
+bash
+复制代码
+git filter-repo --replace-text replace.txt
+replace.txt 文件内容如下：
+
+txt
+复制代码
+OLD_TEXT==>NEW_TEXT
+password123==>********
+d. 删除所有提交中的特定文件
+如果某个文件已经被提交，但你希望彻底删除它及其历史：
+
+bash
+复制代码
+git filter-repo --path sensitive_file.txt --invert-paths
+e. 移除大文件
+列出仓库中的大文件：
+
+bash
+复制代码
+git filter-repo --analyze
+然后移除指定文件：
+
+bash
+复制代码
+git filter-repo --strip-blobs-bigger-than 100M
+4. 使用注意事项
+不可逆操作：git-filter-repo 会直接修改仓库的历史，因此操作前一定要备份。
+影响所有分支：该工具默认会操作整个仓库的历史，包括所有分支和标签。
+后续推送问题：重写历史后，原来的远程分支会变得不兼容，需要强制推送：
+bash
+复制代码
+git push origin --force
+5. 替代 git filter-branch 的优势
+更快的执行速度。
+更直观的命令行语法。
+无需复杂的脚本，功能集成度更高。

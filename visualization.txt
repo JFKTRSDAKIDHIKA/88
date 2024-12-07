@@ -1,0 +1,17 @@
+git log ----输出提交历史，按时间顺序显示所有提交。
+git log --oneline ----每个提交显示为单行，简洁查看。
+git log --oneline --graph  ----以图形化方式显示分支结构。
+git log --oneline --graph --all  ----显示所有分支的提交历史。
+git log --oneline --graph --all --decorate
+
+
+gitk  ----启动 Git 的图形化历史查看工具，可交互查看提交、分支、标签等。
+gitk --all     ----显示所有分支的历史。
+
+
+
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+----使用自定义格式化输出，使日志更直观
+
+git show-branch --all  ----显示所有分支的提交历史，以树状格式展示分支关系。
+

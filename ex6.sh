@@ -1,4 +1,4 @@
-pup 'table#table1 tr td.rb:nth-child(2) text{}' < wikipedia_data.html | grep '^\([0-9]\+\)$'  > column_2.txt
+pup 'table#table1 tr td.rb:nth-child(2) text{}' < wikipedia_data.html | grep '^[0-9]\+$'  > column_2.txt
 
 pup 'table#table1 tr td.rb:nth-child(3) text{}' < wikipedia_data.html > column_3.txt
 

@@ -1,4 +1,4 @@
-journalctl | grep 'Startup finished in' | tail | sed -n 's/.*in \([0-9]*ms\).*/\1/p'
+journalctl | grep 'Startup finished in' | tail | sed  's/.*in \([0-9]*ms\).*/\1/'
 echo "average value"
 journalctl | grep 'Startup finished in' | tail | sed -n 's/.*in \([0-9]*\).*/\1/p' | awk '{sum += $1; count++} END {print sum/count}'
 echo "max value"

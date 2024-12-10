@@ -77,7 +77,7 @@
  LAPTOP-SCVRHSJC kernel: Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
  LAPTOP-SCVRHSJC kernel: Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
  LAPTOP-SCVRHSJC kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
- LAPTOP-SCVRHSJC kernel: Memory: 4081192K/8299132K available (18452K kernel code, 2628K rwdata, 9648K rodata, 2008K init, 1816K bss, 257352K reserved, 0K cma-reserved)
+ LAPTOP-SCVRHSJC kernel: Memory: 4124252K/8299132K available (18452K kernel code, 2628K rwdata, 9648K rodata, 2008K init, 1816K bss, 257348K reserved, 0K cma-reserved)
  LAPTOP-SCVRHSJC kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
  LAPTOP-SCVRHSJC kernel: ftrace: allocating 52916 entries in 207 pages
  LAPTOP-SCVRHSJC kernel: ftrace: allocated 207 pages with 6 groups
@@ -146,7 +146,7 @@
  LAPTOP-SCVRHSJC kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
  LAPTOP-SCVRHSJC kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
  LAPTOP-SCVRHSJC kernel: audit: initializing netlink subsys (disabled)
- LAPTOP-SCVRHSJC kernel: audit: type=2000 audit(1731324922.010:1): state=initialized audit_enabled=0 res=1
+ LAPTOP-SCVRHSJC kernel: audit: type=2000 audit(1731324764.010:1): state=initialized audit_enabled=0 res=1
  LAPTOP-SCVRHSJC kernel: thermal_sys: Registered thermal governor 'step_wise'
  LAPTOP-SCVRHSJC kernel: cpuidle: using governor menu
  LAPTOP-SCVRHSJC kernel: ACPI: bus type PCI registered
@@ -184,6 +184,9 @@
  LAPTOP-SCVRHSJC kernel: PCI: System does not support PCI
  LAPTOP-SCVRHSJC kernel: clocksource: Switched to clocksource hyperv_clocksource_tsc_page
  LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: c376c1c3-d276-48d2-90a9-c04748072c60
+ LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+ LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: dde9cbc0-5060-4436-9448-ea1254a5d177
+ LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
  LAPTOP-SCVRHSJC kernel: VFS: Disk quotas dquot_6.6.0
  LAPTOP-SCVRHSJC kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
  LAPTOP-SCVRHSJC kernel: FS-Cache: Loaded
@@ -232,18 +235,28 @@
  LAPTOP-SCVRHSJC kernel: Asymmetric key parser 'x509' registered
  LAPTOP-SCVRHSJC kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hv_pci
- LAPTOP-SCVRHSJC kernel: hv_pci 6d03d9a5-a431-4bf2-a9a0-fb31f5ad4acc: PCI VMBus probing: Using version 0x10004
- LAPTOP-SCVRHSJC kernel: hv_pci 6d03d9a5-a431-4bf2-a9a0-fb31f5ad4acc: PCI host bridge to bus a431:00
- LAPTOP-SCVRHSJC kernel: pci_bus a431:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
- LAPTOP-SCVRHSJC kernel: pci_bus a431:00: No busn resource found for root bus, will use [bus 00-ff]
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: [1af4:1043] type 00 class 0x010000
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: reg 0x10: [mem 0x9ffe00000-0x9ffe00fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: reg 0x18: [mem 0x9ffe01000-0x9ffe01fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: reg 0x20: [mem 0x9ffe02000-0x9ffe02fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci_bus a431:00: busn_res: [bus 00-ff] end is updated to 00
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: BAR 0: assigned [mem 0x9ffe00000-0x9ffe00fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: BAR 2: assigned [mem 0x9ffe01000-0x9ffe01fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci a431:00:00.0: BAR 4: assigned [mem 0x9ffe02000-0x9ffe02fff 64bit]
+ LAPTOP-SCVRHSJC kernel: hv_pci 4e3b29b5-83e8-4e27-b93d-d2010f4b1179: PCI VMBus probing: Using version 0x10004
+ LAPTOP-SCVRHSJC kernel: hv_pci 4e3b29b5-83e8-4e27-b93d-d2010f4b1179: PCI host bridge to bus 83e8:00
+ LAPTOP-SCVRHSJC kernel: pci_bus 83e8:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+ LAPTOP-SCVRHSJC kernel: pci_bus 83e8:00: No busn resource found for root bus, will use [bus 00-ff]
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: [1af4:1043] type 00 class 0x010000
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: reg 0x10: [mem 0x9ffe00000-0x9ffe00fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: reg 0x18: [mem 0x9ffe01000-0x9ffe01fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: reg 0x20: [mem 0x9ffe02000-0x9ffe02fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci_bus 83e8:00: busn_res: [bus 00-ff] end is updated to 00
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: BAR 0: assigned [mem 0x9ffe00000-0x9ffe00fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: BAR 2: assigned [mem 0x9ffe01000-0x9ffe01fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci 83e8:00:00.0: BAR 4: assigned [mem 0x9ffe02000-0x9ffe02fff 64bit]
+ LAPTOP-SCVRHSJC kernel: hv_pci 04eec524-50cf-47a5-9faf-390bf2789fba: PCI VMBus probing: Using version 0x10004
+ LAPTOP-SCVRHSJC kernel: hv_pci 04eec524-50cf-47a5-9faf-390bf2789fba: PCI host bridge to bus 50cf:00
+ LAPTOP-SCVRHSJC kernel: pci_bus 50cf:00: No busn resource found for root bus, will use [bus 00-ff]
+ LAPTOP-SCVRHSJC kernel: pci 50cf:00:00.0: [1414:008e] type 00 class 0x030200
+ LAPTOP-SCVRHSJC kernel: pci_bus 50cf:00: busn_res: [bus 00-ff] end is updated to 00
+ LAPTOP-SCVRHSJC kernel: hv_pci 3aeae5e9-eb5c-4eb9-9a60-d9fd047d1e4b: PCI VMBus probing: Using version 0x10004
+ LAPTOP-SCVRHSJC kernel: hv_pci 3aeae5e9-eb5c-4eb9-9a60-d9fd047d1e4b: PCI host bridge to bus eb5c:00
+ LAPTOP-SCVRHSJC kernel: pci_bus eb5c:00: No busn resource found for root bus, will use [bus 00-ff]
+ LAPTOP-SCVRHSJC kernel: pci eb5c:00:00.0: [1414:008e] type 00 class 0x030200
+ LAPTOP-SCVRHSJC kernel: pci_bus eb5c:00: busn_res: [bus 00-ff] end is updated to 00
  LAPTOP-SCVRHSJC kernel: ACPI: AC: AC Adapter [AC1] (on-line)
  LAPTOP-SCVRHSJC kernel: ACPI: battery: Slot [BAT1] (battery present)
  LAPTOP-SCVRHSJC kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
@@ -255,9 +268,9 @@
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hv_storvsc
  LAPTOP-SCVRHSJC kernel: wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
  LAPTOP-SCVRHSJC kernel: wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
- LAPTOP-SCVRHSJC kernel: scsi host0: storvsc_host_t
  LAPTOP-SCVRHSJC kernel: tun: Universal TUN/TAP device driver, 1.6
  LAPTOP-SCVRHSJC kernel: PPP generic driver version 2.4.2
+ LAPTOP-SCVRHSJC kernel: scsi host0: storvsc_host_t
  LAPTOP-SCVRHSJC kernel: PPP BSD Compression module registered
  LAPTOP-SCVRHSJC kernel: PPP Deflate Compression module registered
  LAPTOP-SCVRHSJC kernel: PPP MPPE Compression module registered
@@ -292,7 +305,7 @@
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hyperv_keyboard
  LAPTOP-SCVRHSJC kernel: rtc_cmos 00:00: RTC can wake from S4
  LAPTOP-SCVRHSJC kernel: rtc_cmos 00:00: registered as rtc0
- LAPTOP-SCVRHSJC kernel: rtc_cmos 00:00: setting system clock to 2024-11-11T11:35:22 UTC (1731324922)
+ LAPTOP-SCVRHSJC kernel: rtc_cmos 00:00: setting system clock to 2024-11-11T11:32:44 UTC (1731324764)
  LAPTOP-SCVRHSJC kernel: rtc_cmos 00:00: alarms up to one month, 114 bytes nvram
  LAPTOP-SCVRHSJC kernel: device-mapper: ioctl: 4.45.0-ioctl (2021-03-22) initialised: dm-devel@redhat.com
  LAPTOP-SCVRHSJC kernel: device-mapper: raid: Loading target version 1.15.1
@@ -302,7 +315,11 @@
  LAPTOP-SCVRHSJC kernel: hv_utils: Registering HyperV Utility Driver
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hv_utils
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hv_balloon
+ LAPTOP-SCVRHSJC kernel: hv_utils: TimeSync IC version 4.0
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver dxgkrnl
+ LAPTOP-SCVRHSJC kernel: hv_balloon: Using Dynamic Memory protocol version 2.0
+ LAPTOP-SCVRHSJC kernel: Free page reporting enabled
+ LAPTOP-SCVRHSJC kernel: hv_balloon: Cold memory discard hint enabled with order 9
  LAPTOP-SCVRHSJC kernel: drop_monitor: Initializing network drop monitor service
  LAPTOP-SCVRHSJC kernel: Mirror/redirect action on
  LAPTOP-SCVRHSJC kernel: u32 classifier
@@ -331,14 +348,10 @@
  LAPTOP-SCVRHSJC kernel: NET: Registered PF_VSOCK protocol family
  LAPTOP-SCVRHSJC kernel: hv_vmbus: registering driver hv_sock
  LAPTOP-SCVRHSJC kernel: IPI shorthand broadcast: enabled
- LAPTOP-SCVRHSJC kernel: sched_clock: Marking stable (266951000, 255000)->(284642700, -17436700)
+ LAPTOP-SCVRHSJC kernel: sched_clock: Marking stable (311783800, 267000)->(331446900, -19396100)
  LAPTOP-SCVRHSJC kernel: registered taskstats version 1
  LAPTOP-SCVRHSJC kernel: Loading compiled-in X.509 certificates
  LAPTOP-SCVRHSJC kernel: Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
- LAPTOP-SCVRHSJC kernel: hv_utils: TimeSync IC version 4.0
- LAPTOP-SCVRHSJC kernel: hv_balloon: Using Dynamic Memory protocol version 2.0
- LAPTOP-SCVRHSJC kernel: Free page reporting enabled
- LAPTOP-SCVRHSJC kernel: hv_balloon: Cold memory discard hint enabled with order 9
  LAPTOP-SCVRHSJC kernel: Freeing unused kernel image (initmem) memory: 2008K
  LAPTOP-SCVRHSJC kernel: Write protecting the kernel read-only data: 30720k
  LAPTOP-SCVRHSJC kernel: Freeing unused kernel image (text/rodata gap) memory: 2024K
@@ -351,25 +364,12 @@
  LAPTOP-SCVRHSJC kernel:     TERM=linux
  LAPTOP-SCVRHSJC kernel:     WSL_ROOT_INIT=1
  LAPTOP-SCVRHSJC kernel:     WSL_ENABLE_CRASH_DUMP=1
- LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
- LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: dde9cbc0-5060-4436-9448-ea1254a5d177
- LAPTOP-SCVRHSJC kernel: hv_pci 4f844c2b-cdfc-4c38-913f-d50e9f97f235: PCI VMBus probing: Using version 0x10004
- LAPTOP-SCVRHSJC kernel: hv_pci 4f844c2b-cdfc-4c38-913f-d50e9f97f235: PCI host bridge to bus cdfc:00
- LAPTOP-SCVRHSJC kernel: pci_bus cdfc:00: No busn resource found for root bus, will use [bus 00-ff]
- LAPTOP-SCVRHSJC kernel: pci cdfc:00:00.0: [1414:008e] type 00 class 0x030200
- LAPTOP-SCVRHSJC kernel: pci_bus cdfc:00: busn_res: [bus 00-ff] end is updated to 00
  LAPTOP-SCVRHSJC kernel: scsi 0:0:0:0: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
- LAPTOP-SCVRHSJC kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
- LAPTOP-SCVRHSJC kernel: hv_pci 8436b7ca-2138-4924-9e07-8b59100c08c0: PCI VMBus probing: Using version 0x10004
- LAPTOP-SCVRHSJC kernel: hv_pci 8436b7ca-2138-4924-9e07-8b59100c08c0: PCI host bridge to bus 2138:00
- LAPTOP-SCVRHSJC kernel: pci_bus 2138:00: No busn resource found for root bus, will use [bus 00-ff]
- LAPTOP-SCVRHSJC kernel: pci 2138:00:00.0: [1414:008e] type 00 class 0x030200
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: [sda] 795504 512-byte logical blocks: (407 MB/388 MiB)
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: [sda] Write Protect is on
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: [sda] Mode Sense: 0f 00 80 00
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
- LAPTOP-SCVRHSJC kernel: pci_bus 2138:00: busn_res: [bus 00-ff] end is updated to 00
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:0: [sda] Attached SCSI disk
  LAPTOP-SCVRHSJC kernel: scsi 0:0:0:1: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
  LAPTOP-SCVRHSJC kernel: EXT4-fs (sda): mounted filesystem without journal. Opts: (null). Quota mode: none.
@@ -380,36 +380,29 @@
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:1: [sdb] Mode Sense: 0f 00 00 00
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:1: [sdb] Attached SCSI disk
- LAPTOP-SCVRHSJC kernel: IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
  LAPTOP-SCVRHSJC kernel: Adding 2097152k swap on /dev/sdb.  Priority:-2 extents:1 across:2097152k 
- LAPTOP-SCVRHSJC kernel: hv_pci c0d31c2d-d2f8-475b-9862-538acd6eae5f: PCI VMBus probing: Using version 0x10004
- LAPTOP-SCVRHSJC kernel: hv_pci c0d31c2d-d2f8-475b-9862-538acd6eae5f: PCI host bridge to bus d2f8:00
- LAPTOP-SCVRHSJC kernel: pci_bus d2f8:00: root bus resource [mem 0xc00000000-0xe00001fff window]
- LAPTOP-SCVRHSJC kernel: pci_bus d2f8:00: No busn resource found for root bus, will use [bus 00-ff]
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: [1af4:105a] type 00 class 0x088000
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: reg 0x10: [mem 0xe00000000-0xe00000fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: reg 0x18: [mem 0xe00001000-0xe00001fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: reg 0x20: [mem 0xc00000000-0xdffffffff 64bit]
- LAPTOP-SCVRHSJC kernel: pci_bus d2f8:00: busn_res: [bus 00-ff] end is updated to 00
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: BAR 4: assigned [mem 0xc00000000-0xdffffffff 64bit]
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: BAR 0: assigned [mem 0xe00000000-0xe00000fff 64bit]
- LAPTOP-SCVRHSJC kernel: pci d2f8:00:00.0: BAR 2: assigned [mem 0xe00001000-0xe00001fff 64bit]
+ LAPTOP-SCVRHSJC kernel: IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+ LAPTOP-SCVRHSJC kernel: hv_pci d5d00593-b55c-4f0b-bd13-76b63a231312: PCI VMBus probing: Using version 0x10004
+ LAPTOP-SCVRHSJC kernel: hv_pci d5d00593-b55c-4f0b-bd13-76b63a231312: PCI host bridge to bus b55c:00
+ LAPTOP-SCVRHSJC kernel: pci_bus b55c:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+ LAPTOP-SCVRHSJC kernel: pci_bus b55c:00: No busn resource found for root bus, will use [bus 00-ff]
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: [1af4:105a] type 00 class 0x088000
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: reg 0x10: [mem 0xe00000000-0xe00000fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: reg 0x18: [mem 0xe00001000-0xe00001fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: reg 0x20: [mem 0xc00000000-0xdffffffff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci_bus b55c:00: busn_res: [bus 00-ff] end is updated to 00
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: BAR 4: assigned [mem 0xc00000000-0xdffffffff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: BAR 0: assigned [mem 0xe00000000-0xe00000fff 64bit]
+ LAPTOP-SCVRHSJC kernel: pci b55c:00:00.0: BAR 2: assigned [mem 0xe00001000-0xe00001fff 64bit]
  LAPTOP-SCVRHSJC kernel: virtiofs virtio1: Cache len: 0x200000000 @ 0xc00000000
- LAPTOP-SCVRHSJC kernel: memmap_init_zone_device initialised 2097152 pages in 20ms
+ LAPTOP-SCVRHSJC kernel: memmap_init_zone_device initialised 2097152 pages in 30ms
  LAPTOP-SCVRHSJC kernel: FS-Cache: Duplicate cookie detected
  LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=00000005 [p=00000002 fl=222 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=00000000d807ac5d{9P.session} n=00000000b62acd74
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337333836'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=000000007df0dfea{9P.session} n=0000000008ed6811
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337333734'
  LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=00000006 [p=00000002 fl=2 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=00000000d807ac5d{9P.session} n=000000000f17cca7
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337333836'
- LAPTOP-SCVRHSJC kernel: FS-Cache: Duplicate cookie detected
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=00000005 [p=00000002 fl=222 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=00000000d807ac5d{9P.session} n=00000000b62acd74
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337333836'
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=00000007 [p=00000002 fl=2 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=00000000d807ac5d{9P.session} n=0000000099c47800
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337333836'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=000000007df0dfea{9P.session} n=00000000978af5a5
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337333734'
  LAPTOP-SCVRHSJC kernel: scsi 0:0:0:2: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:2: Attached scsi generic sg2 type 0
  LAPTOP-SCVRHSJC kernel: sd 0:0:0:2: [sdc] 2147483648 512-byte logical blocks: (1.10 TB/1.00 TiB)
@@ -424,22 +417,22 @@
  LAPTOP-SCVRHSJC unknown: /usr/lib/wsl/lib/libcuda.so.1 is not a symbolic link
  LAPTOP-SCVRHSJC unknown: 
  LAPTOP-SCVRHSJC kernel: FS-Cache: Duplicate cookie detected
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=00000008 [p=00000002 fl=222 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=00000000d807ac5d{9P.session} n=00000000c9781549
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337343933'
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=00000009 [p=00000002 fl=2 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=00000000d807ac5d{9P.session} n=00000000d41dcb51
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337343933'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=0000000b [p=00000002 fl=222 nc=0 na=1]
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=000000007df0dfea{9P.session} n=00000000fd8ad39b
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337353436'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=0000000c [p=00000002 fl=2 nc=0 na=1]
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=000000007df0dfea{9P.session} n=000000001fc3a921
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337353436'
  LAPTOP-SCVRHSJC /sbin/ldconfig.real: 
  LAPTOP-SCVRHSJC unknown: /usr/lib/wsl/lib/libcuda.so.1 is not a symbolic link
  LAPTOP-SCVRHSJC unknown: 
  LAPTOP-SCVRHSJC kernel: FS-Cache: Duplicate cookie detected
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=0000000b [p=00000002 fl=222 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=00000000d807ac5d{9P.session} n=00000000ff889878
- LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337353034'
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=0000000c [p=00000002 fl=2 nc=0 na=1]
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=00000000d807ac5d{9P.session} n=00000000d102427a
- LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337353034'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie c=0000000f [p=00000002 fl=222 nc=0 na=1]
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-cookie d=000000007df0dfea{9P.session} n=0000000033c9eda5
+ LAPTOP-SCVRHSJC kernel: FS-Cache: O-key=[10] '34323934393337353632'
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie c=00000010 [p=00000002 fl=2 nc=0 na=1]
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-cookie d=000000007df0dfea{9P.session} n=00000000692838f9
+ LAPTOP-SCVRHSJC kernel: FS-Cache: N-key=[10] '34323934393337353632'
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
@@ -450,34 +443,23 @@
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
- LAPTOP-SCVRHSJC systemd-journald[37]: Journal started
- LAPTOP-SCVRHSJC systemd-journald[37]: Runtime Journal (/run/log/journal/f32561277fcb4dbcbacb707494a0db1d) is 8.0M, max 393.0M, 385.0M free.
- LAPTOP-SCVRHSJC systemd-sysctl[53]: Couldn't write '176' to 'kernel/sysrq', ignoring: No such file or directory
- LAPTOP-SCVRHSJC systemd-sysctl[53]: Couldn't write '1' to 'kernel/yama/ptrace_scope', ignoring: No such file or directory
- LAPTOP-SCVRHSJC systemd[1]: modprobe@configfs.service: Deactivated successfully.
- LAPTOP-SCVRHSJC systemd[1]: Finished Load Kernel Module configfs.
- LAPTOP-SCVRHSJC systemd[1]: modprobe@drm.service: Deactivated successfully.
- LAPTOP-SCVRHSJC systemd[1]: Finished Load Kernel Module drm.
- LAPTOP-SCVRHSJC systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
- LAPTOP-SCVRHSJC systemd[1]: Finished Load Kernel Module efi_pstore.
- LAPTOP-SCVRHSJC systemd[1]: modprobe@fuse.service: Deactivated successfully.
- LAPTOP-SCVRHSJC systemd[1]: Finished Load Kernel Module fuse.
- LAPTOP-SCVRHSJC systemd[1]: Mounting FUSE Control File System...
- LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Kernel Configuration File System being skipped.
- LAPTOP-SCVRHSJC systemd[1]: Starting Flush Journal to Persistent Storage...
- LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+ LAPTOP-SCVRHSJC systemd-journald[40]: Journal started
+ LAPTOP-SCVRHSJC systemd-journald[40]: Runtime Journal (/run/log/journal/f32561277fcb4dbcbacb707494a0db1d) is 8.0M, max 393.0M, 385.0M free.
+ LAPTOP-SCVRHSJC systemd-sysctl[57]: Couldn't write '176' to 'kernel/sysrq', ignoring: No such file or directory
+ LAPTOP-SCVRHSJC systemd-sysctl[57]: Couldn't write '1' to 'kernel/yama/ptrace_scope', ignoring: No such file or directory
  LAPTOP-SCVRHSJC systemd[1]: Mounted FUSE Control File System.
- LAPTOP-SCVRHSJC systemd-journald[37]: Time spent on flushing to /var/log/journal/f32561277fcb4dbcbacb707494a0db1d is 5.646ms for 469 entries.
- LAPTOP-SCVRHSJC systemd-journald[37]: System Journal (/var/log/journal/f32561277fcb4dbcbacb707494a0db1d) is 685.0M, max 4.0G, 3.3G free.
+ LAPTOP-SCVRHSJC systemd[1]: Starting Flush Journal to Persistent Storage...
  LAPTOP-SCVRHSJC systemd[1]: Finished Create System Users.
+ LAPTOP-SCVRHSJC systemd-journald[40]: Time spent on flushing to /var/log/journal/f32561277fcb4dbcbacb707494a0db1d is 11.648ms for 452 entries.
+ LAPTOP-SCVRHSJC systemd-journald[40]: System Journal (/var/log/journal/f32561277fcb4dbcbacb707494a0db1d) is 680.6M, max 4.0G, 3.3G free.
  LAPTOP-SCVRHSJC systemd[1]: Starting Create Static Device Nodes in /dev...
- LAPTOP-SCVRHSJC systemd[1]: Finished Set the console keyboard layout.
  LAPTOP-SCVRHSJC systemd[1]: Finished Create Static Device Nodes in /dev.
+ LAPTOP-SCVRHSJC systemd[1]: Starting Rule-based Manager for Device Events and Files...
+ LAPTOP-SCVRHSJC systemd[1]: Finished Set the console keyboard layout.
  LAPTOP-SCVRHSJC systemd[1]: Reached target Preparation for Local File Systems.
  LAPTOP-SCVRHSJC systemd[1]: Mounting Prepare /run/qemu to allow still running qemu binaries of former builds (after package upgrades) to fallback-load modules from there...
  LAPTOP-SCVRHSJC systemd[1]: snap.mount: Directory /snap to mount over is not empty, mounting anyway.
  LAPTOP-SCVRHSJC systemd[1]: Mounting Ensure that the snap directory shares mount events....
- LAPTOP-SCVRHSJC systemd[1]: Starting Rule-based Manager for Device Events and Files...
  LAPTOP-SCVRHSJC systemd[1]: Finished Coldplug All udev Devices.
  LAPTOP-SCVRHSJC systemd[1]: Mounted Prepare /run/qemu to allow still running qemu binaries of former builds (after package upgrades) to fallback-load modules from there.
  LAPTOP-SCVRHSJC systemd[1]: Mounted Ensure that the snap directory shares mount events..
@@ -485,7 +467,6 @@
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for core22, revision 1621...
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for core22, revision 1663...
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1535...
- LAPTOP-SCVRHSJC qemu-kvm-init[126]: mknod: /dev/kvm: File exists
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for snapd, revision 21759...
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for snapd, revision 22991...
  LAPTOP-SCVRHSJC systemd[1]: Mounting Mount unit for ubuntu-desktop-installer, revision 1276...
@@ -515,19 +496,20 @@
  LAPTOP-SCVRHSJC systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
  LAPTOP-SCVRHSJC systemd[1]: Finished Flush Journal to Persistent Storage.
  LAPTOP-SCVRHSJC systemd[1]: Starting Create Volatile Files and Directories...
- LAPTOP-SCVRHSJC systemd[1]: Finished QEMU KVM preparation - module, ksm, hugepages.
- LAPTOP-SCVRHSJC systemd-tmpfiles[130]: rm_rf(/tmp/.X11-unix): Read-only file system
- LAPTOP-SCVRHSJC systemd-tmpfiles[130]: fchmod() of /tmp/.X11-unix failed: Read-only file system
+ LAPTOP-SCVRHSJC systemd-tmpfiles[125]: rm_rf(/tmp/.X11-unix): Read-only file system
+ LAPTOP-SCVRHSJC systemd-tmpfiles[125]: fchmod() of /tmp/.X11-unix failed: Read-only file system
  LAPTOP-SCVRHSJC systemd[1]: Finished Create Volatile Files and Directories.
+ LAPTOP-SCVRHSJC systemd[1]: Starting Network Name Resolution...
+ LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Network Time Synchronization being skipped.
+ LAPTOP-SCVRHSJC systemd[1]: Reached target System Time Set.
+ LAPTOP-SCVRHSJC qemu-kvm-init[127]: mknod: /dev/kvm: File exists
+ LAPTOP-SCVRHSJC systemd[1]: Starting Record System Boot/Shutdown in UTMP...
  LAPTOP-SCVRHSJC systemd[1]: Started Rule-based Manager for Device Events and Files.
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Show Plymouth Boot Screen being skipped.
  LAPTOP-SCVRHSJC systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Forward Password Requests to Plymouth Directory Watch being skipped.
  LAPTOP-SCVRHSJC systemd[1]: Reached target Local Encrypted Volumes.
- LAPTOP-SCVRHSJC systemd[1]: Starting Network Name Resolution...
- LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Network Time Synchronization being skipped.
- LAPTOP-SCVRHSJC systemd[1]: Reached target System Time Set.
- LAPTOP-SCVRHSJC systemd[1]: Starting Record System Boot/Shutdown in UTMP...
+ LAPTOP-SCVRHSJC systemd[1]: Finished QEMU KVM preparation - module, ksm, hugepages.
  LAPTOP-SCVRHSJC systemd[1]: Finished Record System Boot/Shutdown in UTMP.
  LAPTOP-SCVRHSJC systemd[1]: Reached target System Initialization.
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Process error reports when automatic reporting is enabled (file watch) being skipped.
@@ -555,14 +537,14 @@
  LAPTOP-SCVRHSJC systemd[1]: System is tainted: cgroupsv1
  LAPTOP-SCVRHSJC systemd[1]: Starting LSB: automatic crash report generation...
  LAPTOP-SCVRHSJC systemd[1]: Started Regular background program processing daemon.
- LAPTOP-SCVRHSJC cron[162]: (CRON) INFO (pidfile fd = 3)
- LAPTOP-SCVRHSJC cron[162]: (CRON) INFO (Running @reboot jobs)
- LAPTOP-SCVRHSJC systemd-udevd[165]: Using default interface naming scheme 'v249'.
  LAPTOP-SCVRHSJC systemd[1]: Started D-Bus System Message Bus.
  LAPTOP-SCVRHSJC systemd[1]: Started Save initial kernel messages after boot.
+ LAPTOP-SCVRHSJC cron[149]: (CRON) INFO (pidfile fd = 3)
+ LAPTOP-SCVRHSJC cron[149]: (CRON) INFO (Running @reboot jobs)
  LAPTOP-SCVRHSJC systemd[1]: Starting Remove Stale Online ext4 Metadata Check Snapshots...
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in getty on tty2-tty6 if dbus and logind are not available being skipped.
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in irqbalance daemon being skipped.
+ LAPTOP-SCVRHSJC systemd-udevd[140]: Using default interface naming scheme 'v249'.
  LAPTOP-SCVRHSJC systemd[1]: Starting Dispatcher daemon for systemd-networkd...
  LAPTOP-SCVRHSJC systemd[1]: Starting System Logging Service...
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Automatically repair incorrect owner/permissions on core devices being skipped.
@@ -572,74 +554,74 @@
  LAPTOP-SCVRHSJC systemd[1]: Starting Snap Daemon...
  LAPTOP-SCVRHSJC systemd[1]: Starting User Login Management...
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Ubuntu Pro reboot cmds being skipped.
- LAPTOP-SCVRHSJC sh[183]: /bin/sh: 1: cannot create /proc/sys/fs/binfmt_misc/WSLInterop-late: Permission denied
  LAPTOP-SCVRHSJC systemd[1]: Starting WSL binfmt restore...
+ LAPTOP-SCVRHSJC sh[186]: /bin/sh: 1: cannot create /proc/sys/fs/binfmt_misc/WSLInterop-late: Permission denied
  LAPTOP-SCVRHSJC systemd[1]: wsl-binfmt.service: Deactivated successfully.
  LAPTOP-SCVRHSJC systemd[1]: Finished WSL binfmt restore.
  LAPTOP-SCVRHSJC rsyslogd[178]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2112.0]
  LAPTOP-SCVRHSJC rsyslogd[178]: rsyslogd's groupid changed to 111
- LAPTOP-SCVRHSJC systemd[1]: Started System Logging Service.
  LAPTOP-SCVRHSJC rsyslogd[178]: rsyslogd's userid changed to 104
  LAPTOP-SCVRHSJC rsyslogd[178]: [origin software="rsyslogd" swVersion="8.2112.0" x-pid="178" x-info="https://www.rsyslog.com"] start
+ LAPTOP-SCVRHSJC systemd[1]: Started System Logging Service.
+ LAPTOP-SCVRHSJC systemd-udevd[132]: sda: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sda' failed with exit code 1.
+ LAPTOP-SCVRHSJC systemd-udevd[135]: sdc: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sdc' failed with exit code 1.
+ LAPTOP-SCVRHSJC systemd-udevd[172]: sdb: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sdb' failed with exit code 1.
  LAPTOP-SCVRHSJC systemd[1]: Started LSB: automatic crash report generation.
- LAPTOP-SCVRHSJC systemd-udevd[140]: sda: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sda' failed with exit code 1.
- LAPTOP-SCVRHSJC systemd-udevd[134]: sdc: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sdc' failed with exit code 1.
- LAPTOP-SCVRHSJC systemd-udevd[161]: sdb: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/sdb' failed with exit code 1.
- LAPTOP-SCVRHSJC systemd-resolved[136]: Positive Trust Anchors:
- LAPTOP-SCVRHSJC systemd-resolved[136]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
- LAPTOP-SCVRHSJC systemd-resolved[136]: Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
  LAPTOP-SCVRHSJC systemd[1]: e2scrub_reap.service: Deactivated successfully.
  LAPTOP-SCVRHSJC systemd[1]: Finished Remove Stale Online ext4 Metadata Check Snapshots.
- LAPTOP-SCVRHSJC snapd[180]: overlord.go:271: Acquiring state lock file
- LAPTOP-SCVRHSJC snapd[180]: overlord.go:276: Acquired state lock file
- LAPTOP-SCVRHSJC systemd-resolved[136]: Using system hostname 'LAPTOP-SCVRHSJC'.
+ LAPTOP-SCVRHSJC systemd-resolved[128]: Positive Trust Anchors:
+ LAPTOP-SCVRHSJC systemd-resolved[128]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+ LAPTOP-SCVRHSJC systemd-resolved[128]: Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+ LAPTOP-SCVRHSJC snapd[183]: overlord.go:271: Acquiring state lock file
+ LAPTOP-SCVRHSJC snapd[183]: overlord.go:276: Acquired state lock file
+ LAPTOP-SCVRHSJC systemd-resolved[128]: Using system hostname 'LAPTOP-SCVRHSJC'.
  LAPTOP-SCVRHSJC systemd[1]: Started Network Name Resolution.
  LAPTOP-SCVRHSJC systemd[1]: Reached target Network.
  LAPTOP-SCVRHSJC systemd[1]: Reached target Host and Network Name Lookups.
- LAPTOP-SCVRHSJC systemd-logind[181]: New seat seat0.
+ LAPTOP-SCVRHSJC snapd[183]: daemon.go:247: started snapd/2.63+22.04ubuntu0.1 (series 16; classic; devmode; wsl) ubuntu/22.04 (amd64) linux/5.15.153.1-microsoft-stan.
  LAPTOP-SCVRHSJC systemd[1]: Started Service for snap application ubuntu-desktop-installer.subiquity-server.
  LAPTOP-SCVRHSJC systemd[1]: Starting Permit User Sessions...
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Ubuntu Pro Background Auto Attach being skipped.
- LAPTOP-SCVRHSJC snapd[180]: daemon.go:247: started snapd/2.63+22.04ubuntu0.1 (series 16; classic; devmode; wsl) ubuntu/22.04 (amd64) linux/5.15.153.1-microsoft-stan.
- LAPTOP-SCVRHSJC systemd[1]: Started User Login Management.
- LAPTOP-SCVRHSJC systemd[1]: Started Unattended Upgrades Shutdown.
  LAPTOP-SCVRHSJC systemd[1]: Finished Permit User Sessions.
  LAPTOP-SCVRHSJC systemd[1]: Starting Hold until boot process finishes up...
  LAPTOP-SCVRHSJC systemd[1]: Starting Terminate Plymouth Boot Screen...
  LAPTOP-SCVRHSJC systemd[1]: Finished Hold until boot process finishes up.
  LAPTOP-SCVRHSJC systemd[1]: Started Console Getty.
  LAPTOP-SCVRHSJC systemd[1]: Starting Set console scheme...
- LAPTOP-SCVRHSJC snapd[180]: daemon.go:340: adjusting startup timeout by 55s (pessimistic estimate of 30s plus 5s per snap)
+ LAPTOP-SCVRHSJC systemd[1]: Finished Terminate Plymouth Boot Screen.
  LAPTOP-SCVRHSJC systemd[1]: Finished Set console scheme.
  LAPTOP-SCVRHSJC systemd[1]: Created slice Slice /system/getty.
  LAPTOP-SCVRHSJC systemd[1]: Started Getty on tty1.
  LAPTOP-SCVRHSJC systemd[1]: Reached target Login Prompts.
- LAPTOP-SCVRHSJC systemd[1]: Finished Terminate Plymouth Boot Screen.
- LAPTOP-SCVRHSJC snapd[180]: backends.go:58: AppArmor status: apparmor not enabled
+ LAPTOP-SCVRHSJC snapd[183]: daemon.go:340: adjusting startup timeout by 55s (pessimistic estimate of 30s plus 5s per snap)
+ LAPTOP-SCVRHSJC systemd-logind[184]: New seat seat0.
+ LAPTOP-SCVRHSJC systemd[1]: Started User Login Management.
+ LAPTOP-SCVRHSJC systemd[1]: Started Unattended Upgrades Shutdown.
+ LAPTOP-SCVRHSJC snapd[183]: backends.go:58: AppArmor status: apparmor not enabled
  LAPTOP-SCVRHSJC systemd[1]: Started Snap Daemon.
- LAPTOP-SCVRHSJC dbus-daemon[172]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.3' (uid=0 pid=180 comm="/usr/lib/snapd/snapd ")
+ LAPTOP-SCVRHSJC dbus-daemon[150]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.3' (uid=0 pid=183 comm="/usr/lib/snapd/snapd ")
  LAPTOP-SCVRHSJC systemd[1]: Starting Time & Date Service...
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: No valid path found for iwconfig
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: No valid path found for iw
- LAPTOP-SCVRHSJC dbus-daemon[172]: [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=305 comm="/usr/bin/networkctl list --no-pager --no-legend ")
- LAPTOP-SCVRHSJC dbus-daemon[172]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.network1.service': Unit dbus-org.freedesktop.network1.service not found.
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: No valid path found for iwconfig
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: No valid path found for iw
+ LAPTOP-SCVRHSJC dbus-daemon[150]: [system] Activating via systemd: service name='org.freedesktop.network1' unit='dbus-org.freedesktop.network1.service' requested by ':1.4' (uid=0 pid=305 comm="/usr/bin/networkctl list --no-pager --no-legend ")
+ LAPTOP-SCVRHSJC dbus-daemon[150]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.network1.service': Unit dbus-org.freedesktop.network1.service not found.
  LAPTOP-SCVRHSJC networkd-dispatcher[305]: WARNING: systemd-networkd is not running, output will be incomplete.
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: ERROR:Unknown state for interface NetworkctlListState(idx=1, name='lo', type='loopback', operational='n/a', administrative='unmanaged'): n/a
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: Traceback (most recent call last):
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:   File "/usr/bin/networkd-dispatcher", line 298, in trigger_all
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:     self.handle_state(iface_name,
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:   File "/usr/bin/networkd-dispatcher", line 348, in handle_state
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:     raise UnknownState(operational_state)
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: UnknownState: n/a
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: ERROR:Unknown state for interface NetworkctlListState(idx=2, name='eth0', type='ether', operational='n/a', administrative='unmanaged'): n/a
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: Traceback (most recent call last):
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:   File "/usr/bin/networkd-dispatcher", line 298, in trigger_all
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:     self.handle_state(iface_name,
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:   File "/usr/bin/networkd-dispatcher", line 348, in handle_state
- LAPTOP-SCVRHSJC networkd-dispatcher[177]:     raise UnknownState(operational_state)
- LAPTOP-SCVRHSJC networkd-dispatcher[177]: UnknownState: n/a
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: ERROR:Unknown state for interface NetworkctlListState(idx=1, name='lo', type='loopback', operational='n/a', administrative='unmanaged'): n/a
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: Traceback (most recent call last):
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:   File "/usr/bin/networkd-dispatcher", line 298, in trigger_all
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:     self.handle_state(iface_name,
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:   File "/usr/bin/networkd-dispatcher", line 348, in handle_state
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:     raise UnknownState(operational_state)
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: UnknownState: n/a
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: ERROR:Unknown state for interface NetworkctlListState(idx=2, name='eth0', type='ether', operational='n/a', administrative='unmanaged'): n/a
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: Traceback (most recent call last):
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:   File "/usr/bin/networkd-dispatcher", line 298, in trigger_all
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:     self.handle_state(iface_name,
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:   File "/usr/bin/networkd-dispatcher", line 348, in handle_state
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]:     raise UnknownState(operational_state)
+ LAPTOP-SCVRHSJC networkd-dispatcher[176]: UnknownState: n/a
  LAPTOP-SCVRHSJC systemd[1]: Started Dispatcher daemon for systemd-networkd.
- LAPTOP-SCVRHSJC dbus-daemon[172]: [system] Successfully activated service 'org.freedesktop.timedate1'
+ LAPTOP-SCVRHSJC dbus-daemon[150]: [system] Successfully activated service 'org.freedesktop.timedate1'
  LAPTOP-SCVRHSJC systemd[1]: Started Time & Date Service.
  LAPTOP-SCVRHSJC systemd[1]: Finished Wait until snapd is fully seeded.
  LAPTOP-SCVRHSJC systemd[1]: Condition check resulted in Auto import assertions from block devices being skipped.
@@ -648,34 +630,34 @@
  LAPTOP-SCVRHSJC systemd[1]: Starting Record Runlevel Change in UTMP...
  LAPTOP-SCVRHSJC systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
  LAPTOP-SCVRHSJC systemd[1]: Finished Record Runlevel Change in UTMP.
- LAPTOP-SCVRHSJC systemd[1]: Startup finished in 773ms.
+ LAPTOP-SCVRHSJC systemd[1]: Startup finished in 1.369s.
  LAPTOP-SCVRHSJC unknown: WSL (2): Creating login session for root
- LAPTOP-SCVRHSJC login[331]: pam_unix(login:session): session opened for user root(uid=0) by (uid=0)
+ LAPTOP-SCVRHSJC systemd[1]: dmesg.service: Deactivated successfully.
+ LAPTOP-SCVRHSJC login[350]: pam_unix(login:session): session opened for user root(uid=0) by (uid=0)
  LAPTOP-SCVRHSJC systemd[1]: Created slice User Slice of UID 0.
  LAPTOP-SCVRHSJC systemd[1]: Starting User Runtime Directory /run/user/0...
- LAPTOP-SCVRHSJC systemd-logind[181]: New session 1 of user root.
+ LAPTOP-SCVRHSJC systemd-logind[184]: New session 1 of user root.
  LAPTOP-SCVRHSJC systemd[1]: Finished User Runtime Directory /run/user/0.
  LAPTOP-SCVRHSJC systemd[1]: Starting User Manager for UID 0...
- LAPTOP-SCVRHSJC systemd[389]: pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
- LAPTOP-SCVRHSJC systemd[1]: dmesg.service: Deactivated successfully.
- LAPTOP-SCVRHSJC systemd[389]: Queued start job for default target Main User Target.
- LAPTOP-SCVRHSJC systemd[389]: Created slice User Application Slice.
- LAPTOP-SCVRHSJC systemd[389]: Reached target Paths.
- LAPTOP-SCVRHSJC systemd[389]: Reached target Timers.
- LAPTOP-SCVRHSJC systemd[389]: Listening on GnuPG network certificate management daemon.
- LAPTOP-SCVRHSJC systemd[389]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
- LAPTOP-SCVRHSJC systemd[389]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
- LAPTOP-SCVRHSJC systemd[389]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
- LAPTOP-SCVRHSJC systemd[389]: Listening on GnuPG cryptographic agent and passphrase cache.
- LAPTOP-SCVRHSJC systemd[389]: Listening on debconf communication socket.
- LAPTOP-SCVRHSJC systemd[389]: Listening on REST API socket for snapd user session agent.
- LAPTOP-SCVRHSJC systemd[389]: Reached target Sockets.
- LAPTOP-SCVRHSJC systemd[389]: Reached target Basic System.
- LAPTOP-SCVRHSJC systemd[389]: Reached target Main User Target.
- LAPTOP-SCVRHSJC systemd[389]: Startup finished in 113ms.
+ LAPTOP-SCVRHSJC systemd[392]: pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
+ LAPTOP-SCVRHSJC systemd[392]: Queued start job for default target Main User Target.
+ LAPTOP-SCVRHSJC systemd[392]: Created slice User Application Slice.
+ LAPTOP-SCVRHSJC systemd[392]: Reached target Paths.
+ LAPTOP-SCVRHSJC systemd[392]: Reached target Timers.
+ LAPTOP-SCVRHSJC systemd[392]: Listening on GnuPG network certificate management daemon.
+ LAPTOP-SCVRHSJC systemd[392]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+ LAPTOP-SCVRHSJC systemd[392]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+ LAPTOP-SCVRHSJC systemd[392]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+ LAPTOP-SCVRHSJC systemd[392]: Listening on GnuPG cryptographic agent and passphrase cache.
+ LAPTOP-SCVRHSJC systemd[392]: Listening on debconf communication socket.
+ LAPTOP-SCVRHSJC systemd[392]: Listening on REST API socket for snapd user session agent.
+ LAPTOP-SCVRHSJC systemd[392]: Reached target Sockets.
+ LAPTOP-SCVRHSJC systemd[392]: Reached target Basic System.
+ LAPTOP-SCVRHSJC systemd[392]: Reached target Main User Target.
+ LAPTOP-SCVRHSJC systemd[392]: Startup finished in 131ms.
  LAPTOP-SCVRHSJC systemd[1]: Started User Manager for UID 0.
  LAPTOP-SCVRHSJC systemd[1]: Started Session 1 of User root.
- LAPTOP-SCVRHSJC login[395]: ROOT LOGIN  on '/dev/pts/1'
+ LAPTOP-SCVRHSJC login[398]: ROOT LOGIN  on '/dev/pts/1'
  LAPTOP-SCVRHSJC -m[304]: i18n file is /snap/ubuntu-desktop-installer/1286/bin/subiquity/subiquitycore/i18n.py
  LAPTOP-SCVRHSJC -m[304]: Final localedir is /snap/ubuntu-desktop-installer/share/locale
  LAPTOP-SCVRHSJC -m[304]: switch_language en_US
@@ -696,3 +678,4 @@
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
  LAPTOP-SCVRHSJC kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
  LAPTOP-SCVRHSJC systemd[1]: systemd-timedated.service: Deactivated successfully.
+ LAPTOP-SCVRHSJC kernel: hv_balloon: Max. dynamic memory size: 8106 MB
